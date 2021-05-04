@@ -1,5 +1,5 @@
 <br>
-<%= form_for @post do |f| %>
+<%= form_for [:admin, @post] do |f| %>
 	<%= f.text_field :title %>
 	<%= f.text_field :body %>
 	<%= f.submit %>
