@@ -1,5 +1,9 @@
 <br>
 <% @users.each do |user| %>
-  <p><%= user.category %></p>
+  <div class="text-capitalize text-center">
+  	<span class="font-weight-bold"><%= user.firsname %></span>
+  	<%= user.category %>
+  	 <%= link_to "Change", admin_user_path(user) %>
+  </div>
   <hr>
 <% end %>

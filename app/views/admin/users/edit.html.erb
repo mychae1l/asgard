@@ -1,0 +1,7 @@
+<br>
+<%= form_for [:admin, @user] do |f| %>
+	<%= f.text_field :firsname %>
+	<%= f.text_field :email %>
+	<%= select("user", :category, Category.all.collect {|p| [ p.title, p.title ] }, { include_blank: true }) %>
+	<%= f.submit %>
+<% end %>	
