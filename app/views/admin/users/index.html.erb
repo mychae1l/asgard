@@ -1,9 +1,17 @@
 <br>
-<% @users.each do |user| %>
-  <div class="text-capitalize text-center">
-  	<span class="font-weight-bold"><%= user.firsname %></span>
-  	<%= user.category %>
-  	 <%= link_to "Change", admin_user_path(user) %>
-  </div>
-  <hr>
-<% end %>
+<div class="container-fluid">
+	<table class="table table-striped">
+	<tr>
+		<th>Name</th>
+		<th>Category</th>
+		<th>Action</th>
+    </tr>
+	<% @users.each do |user| %>
+		<tr>
+	      <td><%= user.firsname %></td>
+	      <td class="text-capitalize"><%= user.category %></td>
+	      <td><%= link_to "Change", admin_user_path(user) %></td>
+    	</tr>
+	<% end %>
+</table>
+</div>
