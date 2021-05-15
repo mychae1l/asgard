@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
 	root 'homes#index'
 	resources :posts
+	resources :profiles
+	resources :users
 	namespace :admin do
 		get "/", to: "homes#index"
 		resources :posts

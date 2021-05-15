@@ -1,6 +1,20 @@
 <br>
-<%= @user.firsname %>
-<%= @user.category %>
-<%= @user.email %>
-<%= link_to "Delete", [:admin, @user] , method: :delete %>
-<%= link_to "Edit", edit_admin_user_path(@user) %>
+<div class="container-fluid">
+	<table class="table table-striped">
+		<tr>
+			<th>Firstname</th>	
+			<th>Category</th>
+			<th>Email</th>
+			<th>Actions</th>
+		</tr>
+		<tr>
+			<td><%= @user.firsname %></td>
+			<td class="text-capitalize"><%= @user.category %></td>
+			<td><%= @user.email %></td>
+			<td>
+			<%= link_to "Delete", [:admin, @user] , method: :delete, class: "btn btn-danger" %>
+			<%= link_to "Edit", edit_admin_user_path(@user), class: "btn btn-warning" %>
+			</td>
+		</tr>
+	</table>
+</div>
