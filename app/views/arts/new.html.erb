@@ -1,0 +1,9 @@
+<br>
+<%= form_for @art do |f| %>
+	<%= f.file_field :images %>
+	<br>
+	<span>Your Name: </span> <%= f.text_field :author, value:current_user.firsname, class: "author_name" %>
+	<br>
+	<%= f.submit %>
+<% end %>
+

@@ -1,0 +1,11 @@
+<br>
+<% @arts.each do |art| %>
+	<% if art.images.present? %>
+ 		 <p><%= image_tag art.images %>
+	<% else %>
+		<img src="default_image.png">
+ 	<% end %>
+  <br>
+  <p><%= art.author %></p>
+  <hr>
+<% end %>
